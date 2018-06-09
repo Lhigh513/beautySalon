@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group54.dao.OrderDao">
+    <select id="getCategoryName" resultType="string">
+        SELECT categoryName from `category`
+    </select>
+    <select id="getProductName"  resultType="string">
+        SELECT productName FROM `product`
+    </select>
+    <select id="getEmployeeName" resultType="string">
+        SELECT name FROM employee
+    </select>
+    <select id="getCategoryNameByid" parameterType="int" resultType="string">
+        SELECT categoryName from category WHERE id=#{id}
+    </select>
+    <select id="getProductNameByid(" parameterType="int" resultType="string">
+         SELECT productName from product WHERE id=#{id}
+    </select>
+    <select id="getEmployeeNameByid" parameterType="int" resultType="string">
+        SELECT name from employee WHERE id=#{id}
+    </select>
+    <select id="getProductPrice" resultType="int" parameterType="string">
+        SELECT price from product WHERE productName=#{params}
+    </select>
+    <select id="getProductStatusById" parameterType="int" resultType="int">
+        SELECT status FROM `order` WHERE id=#{id}
+    </select>
+    <select id="getPreOrderList" resultType="com.group54.enity.OrderList">
+        select `order`.id ,date,employee.name,product.productName, money,status from `order` left join(`employee`,`product`)on(order.employeeId=employee.id and order.productId=product.id) where status=0;
+    </select>
+    <select id="getDoneOrderList" resultType="com.group54.enity.OrderList">
+        select `order`.id ,date,employee.name,product.productName, money,status from `order` left join(`employee`,`product`)on(order.employeeId=employee.id and order.productId=product.id) where status=1;
+    </select>
+    <select id="getProductId" parameterType="string" resultType="int">
+        SELECT id FROM product WHERE productName=#{productName}
+    </select>
+    <select id="getEmployeeId" parameterType="string" resultType="int">
+        SELECT id FROM employee WHERE name=#{name}
+    </select>
+    <insert id="createPreOrder" parameterType="com.group54.enity.Order">
+        INSERT INTO `order` VALUES (#{id},#{date},#{employeeId},#{productId},#{status},#{money})
+    </insert>
+    <update id="changeStatus" parameterType="int">
+        UPDATE `order` SET status=1 WHERE id=#{id}
+    </update>
+    <delete id="deleteOrder" parameterType="int">
+        DELETE FROM `order` WHERE id=#{id}
+    </delete>
+    <select id="getTempMoney" resultType="com.group54.enity.TempTotalMoney">
+        SELECT * FROM tempTotalMoney;
+    </select>
+    <insert id="insertTempMoney" parameterType="com.group54.enity.TempTotalMoney">
+        INSERT INTO tempTotalMoney VALUES (#{id},#{money})
+    </insert>
+    <delete id="deleteTempMoney" parameterType="int">
+        DELETE FROM tempTotalMoney WHERE id=#{id}
+    </delete>
+    <select id="getVipOrder" resultType="com.group54.enity.VipOrder">
+        SELECT * FROM vipOrder
+    </select>
+    <insert id="createVipOrder" parameterType="com.group54.enity.VipOrder">
+        INSERT into vipOrder VALUES (#{orderId},#{vipId},#{time},#{name},#{phone},#{money})
+    </insert>
+    <delete id="deleteVipOrder" parameterType="int">
+        DELETE FROM vipOrder WHERE orderId=#{orderId}
+    </delete>
+
+
+</mapper>

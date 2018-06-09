@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="spring-web-4.3.16.RELEASE1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-web-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-webmvc-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-webmvc-portlet-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-websocket-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-core-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-orm-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-test-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-tx-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-messaging-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-jms-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-oxm-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-expression-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-jdbc-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-context-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-instrument-tomcat-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-instrument-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-aop-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-beans-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-context-support-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/spring-aspects-4.3.16.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/mybatis-spring-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/mybatis-3.4.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/freemarker-2.3.20.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/jetty-server-8.1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/commons-dbcp-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ProjectNeed/log4j-1.2.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

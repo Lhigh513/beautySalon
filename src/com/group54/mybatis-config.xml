@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 指定映射器路径 -->
+    <mappers>
+        <mapper resource="com/group54/dao/UserMapper.xml" />
+        <mapper resource="com/group54/dao/RoleMapper.xml"/>
+        <mapper resource="com/group54/dao/CustomerMapper.xml"/>
+        <mapper resource="com/group54/dao/CategoryMapper.xml"/>
+        <mapper resource="com/group54/dao/ProductMapper.xml"/>
+        <mapper resource="com/group54/dao/VipCustomerMapper.xml"/>
+        <mapper resource="com/group54/dao/EmployeeMapper.xml"/>
+        <mapper resource="com/group54/dao/OrderMapper.xml"/>
+        <mapper resource="com/group54/dao/MothChartMapper.xml"/>
+    </mappers>
+
+</configuration>

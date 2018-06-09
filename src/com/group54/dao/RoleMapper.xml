@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group54.dao.RoleDao">
+    <select id="getAllRole" resultType="com.group54.enity.Role">
+        SELECT * from role
+    </select>
+    <select id="getRole" parameterType="int" resultType="com.group54.enity.Role">
+        select  * from role where id = #{id}
+    </select>
+    <select id="getRoleName" parameterType="int" resultType="String">
+        select roleName from role where id=#{id}
+    </select>
+    <update id="updateRoleName" >
+        UPDATE role SET roleName =#{roleName} where id=#{id}
+    </update>
+    <insert id="insertRole" parameterType="com.group54.enity.Role">
+        INSERT INTO role VALUES (#{id},#{roleName})
+    </insert>
+    <delete id="deleteRole" parameterType="int">
+        DELETE FROM role WHERE id=#{id}
+    </delete>
+</mapper>

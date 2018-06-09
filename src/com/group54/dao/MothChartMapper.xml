@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group54.dao.MonthChartDao">
+    <select id="getMonthMoney" parameterType="string" resultType="int">
+      select money from `order` where date like concat('%', #{month},'%') and status=1;
+    </select>
+    <select id="getProductName" resultType="string">
+        select product.productName from `order` left join(`product`)on(order.productId=product.id) where order.status=1;
+    </select>
+    <select id="getProduct" resultType="string">
+        SELECT productName from product;
+    </select>
+
+</mapper>

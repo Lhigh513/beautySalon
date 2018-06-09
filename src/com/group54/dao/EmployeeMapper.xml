@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group54.dao.EmployeeDao">
+    <select id="getAllEmployee" resultType="com.group54.enity.Employee">
+        SELECT * FROM  employee
+    </select>
+    <select id="getEmployeeId" resultType="int">
+        SELECT id from employee
+    </select>
+    <select id="getPassword" parameterType="int" resultType="string">
+        SELECT password FROM employee where id=#{id}
+    </select>
+    <select id="getRoleId" parameterType="int" resultType="int">
+        SELECT roleId FROM employee WHERE id=#{id}
+    </select>
+    <select id="getRoleIdByRoleName" parameterType="string" resultType="int">
+        SELECT id from role WHERE roleName=#{roleName}
+    </select>
+    <select id="getRoleName" resultType="string">
+        SELECT roleName from role
+    </select>
+    <update id="updateEmployee" parameterType="com.group54.enity.Employee">
+        UPDATE employee SET name=#{name},password=#{password},roleName=#{roleName},roleId=#{roleId} WHERE id=#{id}
+    </update>
+    <delete id="deleteEmployee" parameterType="int">
+        DELETE FROM employee WHERE id=#{id}
+    </delete>
+    <insert id="insertEmployee" parameterType="com.group54.enity.Employee">
+        INSERT INTO employee VALUES (#{id},#{name},#{password},#{roleName},#{roleId})
+    </insert>
+
+
+</mapper>
